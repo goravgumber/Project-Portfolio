@@ -5,7 +5,7 @@
     <strong>Backend Engineer · Cloud & Distributed Systems · AI Systems Developer</strong>
   </p>
   <p>
-    <a href="https://goravgumber.vercel.app">Live Site</a> ·
+    <a href="https://project-portfolio-gorav.vercel.app/">Live Site</a> ·
     <a href="mailto:goravgumberg@gmail.com">Email</a> ·
     <a href="https://linkedin.com/in/gorav-gumber-9319a2342">LinkedIn</a>
   </p>
