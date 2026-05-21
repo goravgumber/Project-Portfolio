@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gorav Gumber — Portfolio
+
+Backend engineer specializing in distributed systems, cloud-native architecture, real-time applications, and AI-integrated platforms.
+
+Built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and **shadcn/ui**.
+
+## Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| Framework | Next.js 14 (App Router), React 19 |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4, CSS animations |
+| Motion | Framer Motion |
+| Icons | Lucide React + Custom SVG icons |
+| UI | shadcn/ui (Radix primitives + CVA) |
+| Deployment | Vercel (recommended) |
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles + theme variables
+│   ├── layout.tsx           # Root layout with SEO metadata
+│   └── page.tsx             # Main page composing all sections
+├── components/
+│   ├── header.tsx           # Fixed navigation header
+│   ├── ui/
+│   │   ├── badge.tsx        # Tag/badge component
+│   │   ├── button.tsx       # Button variants
+│   │   ├── card.tsx         # Card container
+│   │   ├── icons.tsx        # Custom SVG icons (GitHub, LinkedIn)
+│   │   └── section-heading.tsx  # Reusable section heading
+│   └── sections/
+│       ├── hero.tsx         # Hero with terminal aesthetic
+│       ├── about.tsx        # About section
+│       ├── tech-stack.tsx   # Tech stack categories
+│       ├── experience.tsx   # Work experience timeline
+│       ├── projects.tsx     # Featured projects (show/hide)
+│       ├── philosophy.tsx   # Engineering principles
+│       ├── github-section.tsx  # Open source presence
+│       ├── resume-section.tsx  # Resume download
+│       ├── contact.tsx      # Contact info
+│       └── footer.tsx       # Site footer
+├── data/
+│   ├── info.ts              # Personal info + philosophy
+│   ├── tech-stack.ts        # Tech stack data
+│   ├── experience.ts        # Experience data
+│   └── projects.ts          # Projects data
+└── lib/
+    └── utils.ts             # cn() utility
+```
+
+## Sections
+
+1. **Hero** — Name, role, tagline, CTA buttons (Resume, GitHub, LinkedIn, Contact), location indicator, scroll prompt
+2. **About** — Human-written bio covering backend engineering, distributed systems, Linux/cloud learning journey, AI systems
+3. **Tech Stack** — Categorized skill cards (Languages, Backend & APIs, Databases & Infrastructure, AI & Systems, Developer Tools)
+4. **Experience** — Software Developer Intern at Infotact Solutions timeline with highlights
+5. **Projects** — 7 featured projects with architecture descriptions, tech tags, GitHub links, and live links. Show more/less toggle
+6. **Engineering Philosophy** — 6 principles: Modular Architecture, API Contracts First, Observability by Default, Containerized Delivery, Security First, Event-Driven Thinking
+7. **GitHub/Open Source** — Learning journey, 100DaysOfReact, active contributions
+8. **Resume** — Downloadable resume section
+9. **Contact** — Email, GitHub, LinkedIn with professional CTA
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy to Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Push this repository to GitHub
+2. Go to [vercel.com](https://vercel.com) and import the repository
+3. Vercel auto-detects Next.js — no configuration needed
+4. Click **Deploy**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Environment Variables
 
-## Learn More
+No environment variables are required for the portfolio to function. All data is static.
 
-To learn more about Next.js, take a look at the following resources:
+If you add contact form functionality later, you would add:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+CONTACT_EMAIL=your@email.com
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
+Edit data files in `src/data/` to update:
+- `info.ts` — Name, role, tagline, about paragraphs, philosophy
+- `tech-stack.ts` — Skills and categories
+- `experience.ts` — Work experience
+- `projects.ts` — Project details, descriptions, links
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Replace `public/resume.pdf` with your actual resume file.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Update `src/app/layout.tsx` metadata with your actual domain and social links.
+
+## Performance
+
+- Static site generation (SSG) — all pages pre-rendered at build time
+- Optimized font loading with next/font
+- No runtime data fetching
+- Minimal JavaScript with client components only where needed (animations, interactions)
+
+## Lighthouse Optimization
+
+The portfolio scores highly on Lighthouse by default due to:
+- Static HTML generation
+- Optimized font loading
+- Semantic HTML structure
+- Proper heading hierarchy
+- Accessible interactive elements
+- Responsive design with mobile-first approach
+
+## License
+
+MIT

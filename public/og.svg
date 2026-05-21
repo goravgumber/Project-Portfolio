@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0a0a0b"/>
+  <rect x="80" y="80" width="1040" height="470" rx="24" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+  <text x="600" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="72" font-weight="700" fill="#fafafa">Gorav Gumber</text>
+  <text x="600" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" fill="#a1a1aa">Backend Engineer &amp; Cloud Systems Developer</text>
+  <text x="600" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="#3b82f6">Distributed Systems &bull; Cloud-Native &bull; AI Platforms</text>
+  <rect x="530" y="440" width="140" height="2" rx="1" fill="#27272a"/>
+</svg>
